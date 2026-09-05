@@ -34,11 +34,11 @@ Evaluated on an Indonesian dataset (`andreaschandra/tydiqa-id`) using Top-10 Ret
    ```python
    import pandas as pd
 
-   # a. Initialize Configuration and Hybrid Search Engine
+   # Initialize Configuration and Hybrid Search Engine
    config = Config()
    searcher = HybridSearch(config)
 
-   # b. Prepare Sample Data
+   # Prepare Sample Data
    data = {
     "id": ["DOC_001", "DOC_002"],
     "title": ["Palembang City", "Wayang Art"],
@@ -49,10 +49,10 @@ Evaluated on an Indonesian dataset (`andreaschandra/tydiqa-id`) using Top-10 Ret
    }
    df = pd.DataFrame(data)
 
-   # c. Build Indexes
+   # Build Indexes
    searcher.build(df)
 
-   # d. Perform Search Query
+   # Perform Search Query
    results = searcher.search("Informasi tentang Palembang", top_k=2)
 
    for res in results:
