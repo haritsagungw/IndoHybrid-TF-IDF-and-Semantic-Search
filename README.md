@@ -1,6 +1,6 @@
 # IndoHybrid-TF-IDF-and-Semantic-Search
 
-**IndoHybrid** is a hybrid search engine designed for Indonesian text retrieval. It combines lexical search (sparse retrieval via TF-IDF) and semantic search (dense retrieval via `intfloat/multilingual-e5-small` & FAISS). The search results are merged using **Reciprocal Rank Fusion (RRF)** to deliver accurate Information Retrieval (IR) performance.
+**IndoHybrid** is a hybrid search engine designed for Indonesian text retrieval. It combines lexical and semantic search. The search results are merged using **Reciprocal Rank Fusion (RRF)** to deliver accurate Information Retrieval (IR) performance.
 
 ## Key Features
 
@@ -19,8 +19,6 @@ Evaluated on an Indonesian dataset (`andreaschandra/tydiqa-id`) using Top-10 Ret
 | **Lexical (TF-IDF)** | 84.00% | 0.6199 |
 | **Semantic (E5 + FAISS)** | 90.00% | 0.6947 |
 | **Hybrid (RRF)** | **88.00%** | **0.6865** |
-
----
 
 ## Installation & Setup
 
