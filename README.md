@@ -33,30 +33,22 @@ pip install -r requirements.txt
 ```
 ```python
 import pandas as pd
+from IndoHybrid_TF_IDF_and_Semantic_Search import HybridSearch, Config
 
-# Initialize Configuration and Hybrid Search Engine
+# Initialize configuration and hybrid search engine
 config = Config()
 searcher = HybridSearch(config)
 
-# Prepare Sample Data
-data = {
-"id": ["DOC_001", "DOC_002"],
-"title": ["Palembang City", "Wayang Art"],
-"text": [
-"Kota Palembang adalah ibu kota provinsi Sumatera Selatan.",
-"Wayang Kulit Palembang adalah seni pewayangan khas Sumatera Selatan."
-]
-}
-df = pd.DataFrame(data)
+# Prepare sample dataset
+df = pd.DataFrame([
+    {"id": "DOC_001", "title": "Kota Palembang", "text": "Kota Palembang adalah ibu kota provinsi Sumatera Selatan yang terkenal dengan Pempek."},
+    {"id": "DOC_002", "title": "Seni Wayang", "text": "Wayang Kulit Palembang adalah seni pewayangan khas Sumatera Selatan."}
+])
 
-# Build Indexes
+# Build indexes and perform query
 searcher.build(df)
-
-# Perform Search Query
 results = searcher.search("Informasi tentang Palembang", top_k=2)
-
-for res in results:
-print(f"[{res['rank']}] {res['title']} | RRF Score: {res['rrf_score']}")
+print(results)
 ```
 
 ## Evaluation and Results
