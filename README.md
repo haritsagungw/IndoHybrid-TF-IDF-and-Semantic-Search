@@ -59,13 +59,15 @@ Evaluated on an Indonesian dataset (`andreaschandra/tydiqa-id`) using Top-10 Ret
     print(f"[{res['rank']}] {res['title']} | RRF Score: {res['rrf_score']}")
    ```
 
-   ## Repository Structure
- ```text
-.
-├── IndoHybrid_TF_IDF_and_Semantic_Search.ipynb
-├── requirements.txt
-├── .gitignore
-└── README.md
+## Evaluation and Results
+
+The model achieves an **88.00% Hit Rate@10** and **0.6865 MRR@10** on the Indonesian subset of the `andreaschandra/tydiqa-id` dataset benchmark.
+
+| Query Input | Top Retrieved Document (Title) | Match Type | RRF Score |
+| :--- | :--- | :--- | :---: |
+| `makanan khas palembang` | Pempek Palembang | Lexical + Semantic | 0.0328 |
+| `tari tradisional sumatra selatan` | Tari Tanggai | Semantic | 0.0164 |
+| `ibu kota sumsel` | Kota Palembang | Semantic (Synonym) | 0.0164 |
    
 
 
