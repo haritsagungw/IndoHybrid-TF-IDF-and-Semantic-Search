@@ -62,11 +62,12 @@ Evaluated on an Indonesian dataset (`andreaschandra/tydiqa-id`) using Top-10 Ret
    ```
 
    ## Repository Structure
-   .
-├── IndoHybrid_TF_IDF_and_Semantic_Search.ipynb  # Main Jupyter Notebook
-├── requirements.txt                              # Python dependencies
-├── .gitignore                                    # Git ignore rules
-└── README.md                                     # Project documentation
+ ```text
+.
+├── IndoHybrid_TF_IDF_and_Semantic_Search.ipynb
+├── requirements.txt
+├── .gitignore
+└── README.md
    
 
 
