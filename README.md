@@ -23,41 +23,41 @@ Evaluated on an Indonesian dataset (`andreaschandra/tydiqa-id`) using Top-10 Ret
 ## Installation & Setup
 
 1. Clone this repository:
-   ```bash
-   git clone [https://github.com/YOUR_USERNAME/YOUR_REPOSITORY_NAME.git](https://github.com/YOUR_USERNAME/YOUR_REPOSITORY_NAME.git)
-   cd YOUR_REPOSITORY_NAME
-   ```
+```bash
+git clone [https://github.com/YOUR_USERNAME/YOUR_REPOSITORY_NAME.git](https://github.com/YOUR_USERNAME/YOUR_REPOSITORY_NAME.git)
+cd YOUR_REPOSITORY_NAME
+```
 2. Install the required dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
-   ```python
-   import pandas as pd
+```bash
+pip install -r requirements.txt
+```
+```python
+import pandas as pd
 
-   # Initialize Configuration and Hybrid Search Engine
-   config = Config()
-   searcher = HybridSearch(config)
+# Initialize Configuration and Hybrid Search Engine
+config = Config()
+searcher = HybridSearch(config)
 
-   # Prepare Sample Data
-   data = {
-    "id": ["DOC_001", "DOC_002"],
-    "title": ["Palembang City", "Wayang Art"],
-    "text": [
-        "Kota Palembang adalah ibu kota provinsi Sumatera Selatan.",
-        "Wayang Kulit Palembang adalah seni pewayangan khas Sumatera Selatan."
-    ]
-   }
-   df = pd.DataFrame(data)
+# Prepare Sample Data
+data = {
+"id": ["DOC_001", "DOC_002"],
+"title": ["Palembang City", "Wayang Art"],
+"text": [
+"Kota Palembang adalah ibu kota provinsi Sumatera Selatan.",
+"Wayang Kulit Palembang adalah seni pewayangan khas Sumatera Selatan."
+]
+}
+df = pd.DataFrame(data)
 
-   # Build Indexes
-   searcher.build(df)
+# Build Indexes
+searcher.build(df)
 
-   # Perform Search Query
-   results = searcher.search("Informasi tentang Palembang", top_k=2)
+# Perform Search Query
+results = searcher.search("Informasi tentang Palembang", top_k=2)
 
-   for res in results:
-    print(f"[{res['rank']}] {res['title']} | RRF Score: {res['rrf_score']}")
-   ```
+for res in results:
+print(f"[{res['rank']}] {res['title']} | RRF Score: {res['rrf_score']}")
+```
 
 ## Evaluation and Results
 
