@@ -1,0 +1,32 @@
+# Byte-compiled / Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Jupyter Notebook Checkpoints
+.ipynb_checkpoints/
+
+# Virtual Environment
+env/
+venv/
+.venv/
+ENV/
+
+# Model & Search Artifacts (Sesuai kode CONFIG.artifact_dir)
+hybrid_search_artifact/
+*.joblib
+*.npz
+*.index
+
+# Downloaded Datasets & Cache
+.cache/
+data/
+nltk_data/
+
+# Environment / Keys
+.env
+
+# OS / IDE Specific
+.DS_Store
+.vscode/
+.idea/
