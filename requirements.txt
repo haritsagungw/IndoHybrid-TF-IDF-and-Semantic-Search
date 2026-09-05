@@ -1,0 +1,11 @@
+torch
+sentence-transformers
+faiss-cpu
+scikit-learn
+datasets
+joblib
+pandas
+numpy
+scipy
+nltk
+tqdm
